@@ -68,6 +68,7 @@ def scatter_points_europe(gdf: geopandas.GeoDataFrame,
     # else:
     #     gdf.plot(ax=ax, marker='.', column=col_to_plot, alpha=.1, aspect='1.3', **kwds_plot)
     gdf.plot(ax=ax, marker='.', column=col_to_plot, alpha=.1, aspect='1.3', **kwds_plot)
+
     return ax
 
 # Load data
@@ -91,15 +92,15 @@ europe=world[world.continent==”Europe”]
 #     gdf_mean_std = create_geodf_from_df(df_mean_std)
 gdf_loadings = create_geodf_from_df(DF_Data)
 
-#fig, axes = plt.subplots(1, 2, figsize=(fig_width, fig_height / 1.3))
-#ax = axes[0]
-scatter_points_europe(gdf_loadings, 'msl_DE', cmap=BuGn)
+fig, axes = plt.subplots(1, 2)
+ax = axes[0]
+scatter_points_europe(gdf_loadings, 'msl_DE', ax=ax, cmap=BuGn)
 #ax.set_title('Mean [$m/s$]')
 
 
-#ax = axes[1]
-#scatter_points_germany(gdf_mean_std, f'std', ax=ax, cmap=cycler_01)
+ax = axes[1]
+scatter_points_europe(gdf_loadings, 'msl_DE', ax=ax, cmap=BuGn)
 #ax.set_title('Standard deviation [$m/s$]')
-#fig.tight_layout()
-#fig.savefig(join(exportfolder, f'mean_std_spatially_season_{season}.png'), dpi=dpi)
+fig.tight_layout()
+fig.savefig('test.png')
 
