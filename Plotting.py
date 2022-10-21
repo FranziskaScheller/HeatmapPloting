@@ -54,7 +54,7 @@ def scatter_points_europe(gdf: geopandas.GeoDataFrame,
     :param kwds_plot: passed to geopandas scatter function
     :return: plt.Axes object with plot
     """
-    world = geopandas.read_file(geopandas.datasets.get_path(‘naturalearth_lowres’))
+    world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
     europe = world[world.continent ==”Europe”]
 
     # if ax is None:
