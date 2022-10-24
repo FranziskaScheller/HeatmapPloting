@@ -102,7 +102,7 @@ DF_Data_24bf = create_geodf_from_df(DF_Data_24bf)
 
 DF_Data_ref = pd.read_csv(
     'MeanClimatologicalData_DF_DE_reshaped_ref.csv', header=0, index_col=None, sep=';')
-DF_Data_ref = create_geodf_from_df(DF_Data_24bf)
+DF_Data_ref = create_geodf_from_df(DF_Data_ref)
 
 
 #world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
