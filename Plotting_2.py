@@ -87,7 +87,6 @@ def scatter_points_europe(gdf: geopandas.GeoDataFrame,
 
     return ax
 
-# Load data
 
 DF_Data = pd.read_csv(
     'MeanClimatologicalData_DF_DE_reshaped.csv', header=0, index_col=None, sep=';')
