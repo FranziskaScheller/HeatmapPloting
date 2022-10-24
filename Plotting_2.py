@@ -79,7 +79,7 @@ def scatter_points_europe(gdf: geopandas.GeoDataFrame,
     divider = make_axes_locatable(ax)
     cax = divider.append_axes("right", size="5%", pad=0.1)
     #aspect='1.3',
-    gdf.plot(ax=ax, marker='.', column=col_to_plot, alpha=.1, legend=True, cax=cax, **kwds_plot)
+    gdf.plot(ax=ax, marker='.', column=col_to_plot, legend=True, cax=cax, **kwds_plot)
     ax.set(title='test')
     # else:
     #     gdf.plot(ax=ax, marker='.', column=col_to_plot, alpha=.1, aspect='1.3', **kwds_plot)

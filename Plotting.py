@@ -60,7 +60,7 @@ def scatter_points_europe(gdf: geopandas.GeoDataFrame,
     world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
     europe = world[(world.continent == "Europe") & (world.name != "Russia")]
 
-    # Create a custom polygon
+    # Create a custom polygons
     polygon = Polygon([(-22, 26.5), (45.5, 26.5), (45.5, 72.5), (-22, 72.5)])
     # poly_gdf = geopandas.GeoDataFrame([1], geometry=[polygon], crs=world.crs)
     # fig, ax = plt.subplots()
